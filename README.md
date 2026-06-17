@@ -27,6 +27,20 @@ Advanced URL analysis tool that detects phishing attempts through URL parsing, h
 - **Batch Processing** — Analyze multiple URLs from file input
 - **Report Generation** — Detailed analysis reports in JSON/CSV
 
+
+## Architecture
+
+```mermaid
+graph LR
+    USER[User] --> API[FastAPI]
+    API --> PROC[Processor]
+    PROC --> DB[(Database)]
+    API --> AUTH[Auth Layer]
+    PROC --> AI[AI/ML Engine]
+```
+
+Microservices-based architecture with API Gateway, authentication layer, PostgreSQL persistence, and event-driven communication.
+
 ## Quick Start
 
 ```bash
